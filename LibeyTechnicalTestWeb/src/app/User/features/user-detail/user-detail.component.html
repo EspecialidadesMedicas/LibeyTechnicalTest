@@ -1,0 +1,54 @@
+<div class="user-detail-card" *ngIf="user">
+  <h2>Detalles del Usuario</h2>
+  <button class="btn btn-secondary mb-3 float-end" (click)="goBack()">
+  <i class="fas fa-arrow-left me-2"></i> Volver
+</button> 
+  <table>
+    <tbody>
+      <!-- <tr>
+        <th>Tipo de Documento</th>
+        <td>{{ user.documentTypeId }}</td>
+      </tr> -->
+      <tr>
+        <th>Número de Documento</th>
+        <td>{{ user.documentNumber }}</td>
+      </tr>
+      <tr>
+        <th>Nombre</th>
+        <td>{{ user.name }}</td>
+      </tr>
+      <tr>
+        <th>Apellido Paterno</th>
+        <td>{{ user.fathersLastName }}</td>
+      </tr>
+      <tr>
+        <th>Apellido Materno</th>
+        <td>{{ user.mothersLastName }}</td>
+      </tr>
+      <tr>
+        <th>Dirección</th>
+        <td>{{ user.address }}</td>
+      </tr>
+      <tr>
+        <th>Departamento</th>
+        <td>{{ user.regionCode }}</td>
+      </tr>
+      <tr>
+        <th>Provincia</th>
+        <td>{{ user.provinceCode }}</td>
+      </tr>
+      <tr>
+        <th>Distrito</th>
+        <td>{{ user.ubigeoCode }}</td>
+      </tr>
+      <tr>
+        <th>Teléfono</th>
+        <td>{{ user.phone }}</td>
+      </tr>
+      <tr>
+        <th>Email</th>
+        <td>{{ user.email }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

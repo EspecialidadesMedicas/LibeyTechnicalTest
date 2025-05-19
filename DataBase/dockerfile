@@ -1,0 +1,12 @@
+FROM mcr.microsoft.com/mssql/server:2019-CU12-ubuntu-20.04
+ENV ACCEPT_EULA=Y
+ENV SA_PASSWORD=.Nv3rrefg049jsKK.
+ENV MSSQL_PID=Express
+COPY ["CEM/SqlCmdScript.sql","/var/opt/sqlserver/SqlCmdScript.sql"]
+COPY CEM/entrypoint.sh /usr/src/app/entrypoint.sh
+
+USER root
+RUN chmod +x /usr/src/app/entrypoint.sh
+
+USER mssql
+ENTRYPOINT ["/usr/src/app/entrypoint.sh"]

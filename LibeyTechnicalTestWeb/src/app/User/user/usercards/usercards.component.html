@@ -1,0 +1,55 @@
+<div class="row mt-3" style="margin: 5rem 10rem 0 10rem; padding-top: 5rem; background-color:#edf2f6; border-radius: 10px;">
+
+  <!-- Crear cliente -->
+  <div class="col-lg-3 col-md-6 mb-4">
+    <div class="card" style="height: 15rem;">
+      <h5 class="card-header"><b>Crear cliente</b></h5>
+      <div class="card-body">
+        <p class="card-text">Registrar clientes nuevos.</p>
+      </div>
+      <div class="card-footer">
+	  <a [routerLink]="['/user/maintenance']" class="btn btn-primary" style="width: 100%;">Ir</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Listar clientes
+  <div class="col-lg-9 col-md-12 mb-4">
+    <div class="card" style="min-height: 15rem;">
+      <h5 class="card-header"><b>Listar clientes</b></h5>
+      <div class="card-body" style="max-height: 40rem; overflow-y: auto;">
+        <div *ngIf="users && users.length; else noUsers">
+          <div *ngFor="let user of users" class="mb-2 p-2 border rounded d-flex justify-content-between align-items-center">
+            <div>
+              <b>{{ user.name }} {{ user.fathersLastName }}</b><br />
+              DNI: {{ user.documentNumber }}<br />
+              Email: {{ user.email }}
+            </div>
+            <div>
+              <a 
+                [routerLink]="['../user/maintenance']" 
+                [queryParams]="{ doc: user.documentNumber }" 
+                class="btn btn-outline-primary btn-sm">
+                Editar
+              </a>
+            </div>
+          </div>
+        </div>
+        <ng-template #noUsers>
+          <p>No hay usuarios registrados.</p>
+        </ng-template>
+      </div>
+    </div>
+  </div> -->
+  <div class="col-lg-2 col-md-4">
+    <div class="card" style="width: 20rem; height: 15rem;">
+      <h5 class="card-header"><b>Listar clientes</b></h5>
+      <div class="card-body">
+        <p class="card-text">Buscar clientes ya registrados.</p>
+      </div>
+      <div class="card-footer">
+		<a [routerLink]="['/user/list']" class="btn btn-primary" style="width: 100%;">Ir</a>
+      </div>
+    </div>
+  </div>
+</div>
